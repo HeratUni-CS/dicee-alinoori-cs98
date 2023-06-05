@@ -29,3 +29,30 @@ rolldices(){
     rightdice = Random().nextInt(6) + 1;
   });
 }
+
+@override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            child: TextButton(
+              onPressed: (){
+                rolldices();
+              },
+              child: Image.asset('images/$leftdice.png'),
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              onPressed: (){
+                rolldices();
+              },
+              child: Image.asset('images/$rightdice.png'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
